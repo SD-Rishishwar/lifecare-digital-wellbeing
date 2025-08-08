@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				medical: {
+					primary: 'hsl(var(--medical-primary))',
+					'primary-foreground': 'hsl(var(--medical-primary-foreground))',
+					'primary-light': 'hsl(var(--medical-primary-light))',
+					secondary: 'hsl(var(--medical-secondary))',
+					'secondary-foreground': 'hsl(var(--medical-secondary-foreground))',
+					'secondary-light': 'hsl(var(--medical-secondary-light))',
+					accent: 'hsl(var(--medical-accent))',
+					'accent-foreground': 'hsl(var(--medical-accent-foreground))',
+					gray: {
+						50: 'hsl(var(--medical-gray-50))',
+						100: 'hsl(var(--medical-gray-100))',
+						200: 'hsl(var(--medical-gray-200))',
+						300: 'hsl(var(--medical-gray-300))',
+						400: 'hsl(var(--medical-gray-400))',
+						500: 'hsl(var(--medical-gray-500))',
+						600: 'hsl(var(--medical-gray-600))',
+						700: 'hsl(var(--medical-gray-700))',
+						800: 'hsl(var(--medical-gray-800))',
+						900: 'hsl(var(--medical-gray-900))',
+					}
 				}
 			},
 			borderRadius: {

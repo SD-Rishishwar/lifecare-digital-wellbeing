@@ -1,42 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Medical & Healthcare Design System */
 @layer base {
   :root {
+    /* Medical Color Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 27%;
+
+    /* Medical Primary - Professional Blue */
+    --medical-primary: 210 100% 45%;
+    --medical-primary-foreground: 0 0% 100%;
+    --medical-primary-light: 210 100% 85%;
+
+    /* Medical Secondary - Healing Green */
+    --medical-secondary: 142 69% 58%;
+    --medical-secondary-foreground: 0 0% 100%;
+    --medical-secondary-light: 142 69% 85%;
+
+    /* Medical Accent - Trust Navy */
+    --medical-accent: 215 84% 25%;
+    --medical-accent-foreground: 0 0% 100%;
+
+    /* Medical Neutral Palette */
+    --medical-gray-50: 210 17% 98%;
+    --medical-gray-100: 210 17% 95%;
+    --medical-gray-200: 210 17% 90%;
+    --medical-gray-300: 210 17% 83%;
+    --medical-gray-400: 210 17% 65%;
+    --medical-gray-500: 210 17% 46%;
+    --medical-gray-600: 210 17% 37%;
+    --medical-gray-700: 210 17% 28%;
+    --medical-gray-800: 210 17% 19%;
+    --medical-gray-900: 210 17% 11%;
+
+    /* Legacy mappings for compatibility */
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 215 25% 27%;
+    --accent: 142 69% 58%;
+    --accent-foreground: 0 0% 100%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 215 25% 27%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 27%;
+    --muted: 210 17% 95%;
+    --muted-foreground: 210 17% 46%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 17% 90%;
+    --input: 210 17% 90%;
+    --ring: 210 100% 45%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Medical Gradients */
+    --gradient-medical-primary: linear-gradient(135deg, hsl(210 100% 45%), hsl(210 100% 35%));
+    --gradient-medical-hero: linear-gradient(135deg, hsl(210 100% 45%) 0%, hsl(142 69% 58%) 100%);
+    --gradient-medical-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 17% 98%) 100%);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Medical Shadows */
+    --shadow-medical-soft: 0 4px 20px -2px hsl(210 100% 45% / 0.1);
+    --shadow-medical-strong: 0 10px 40px -4px hsl(210 100% 45% / 0.2);
+    --shadow-medical-glow: 0 0 0 1px hsl(210 100% 45% / 0.1), 0 2px 4px hsl(210 100% 45% / 0.1);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +131,82 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Medical Component Styles */
+@layer components {
+  .medical-hero-gradient {
+    background: var(--gradient-medical-hero);
+  }
+
+  .medical-card {
+    background: var(--gradient-medical-card);
+    box-shadow: var(--shadow-medical-soft);
+  }
+
+  .medical-card:hover {
+    box-shadow: var(--shadow-medical-strong);
+    transform: translateY(-2px);
+  }
+
+  .medical-button-primary {
+    background: var(--gradient-medical-primary);
+    box-shadow: var(--shadow-medical-glow);
+  }
+
+  .medical-button-primary:hover {
+    box-shadow: var(--shadow-medical-strong);
+    transform: translateY(-1px);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
