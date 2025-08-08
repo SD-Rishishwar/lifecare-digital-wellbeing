@@ -344,7 +344,7 @@ const Contact = () => {
                   size="lg" 
                   className="medical-button-primary text-medical-primary-foreground font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  Request Ambulance
+                  Contact Us Now
                 </Button>
               </div>
             </CardContent>

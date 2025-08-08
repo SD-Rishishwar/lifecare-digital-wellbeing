@@ -49,14 +49,7 @@ const Home = () => {
             Your Health, Our Mission - Providing exceptional healthcare services with compassion, 
             excellence, and innovation for over two decades.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-medical-secondary hover:bg-medical-secondary/90 text-medical-secondary-foreground font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Appointment
-            </Button>
+          <div className="flex justify-center">
             <Button 
               size="lg" 
               variant="outline" 
@@ -154,22 +147,14 @@ const Home = () => {
             Ready to Take Care of Your Health?
           </h2>
           <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
-            Don't wait for tomorrow. Book your appointment today and take the first step 
-            towards a healthier, happier life with our expert medical team.
+            Contact us today to learn more about our comprehensive healthcare services 
+            and how we can help you maintain optimal health and wellness.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-white text-medical-primary hover:bg-medical-gray-100 font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Appointment Now
-            </Button>
+          <div className="flex justify-center">
             <Link to="/contact">
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-medical-primary font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 bg-transparent"
+                className="bg-white text-medical-primary hover:bg-medical-gray-100 font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Contact Us
                 <ArrowRight className="w-5 h-5 ml-2" />

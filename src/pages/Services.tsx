@@ -301,14 +301,14 @@ const Services = () => {
             Need Medical Assistance?
           </h2>
           <p className="text-xl mb-8 opacity-95 max-w-2xl mx-auto">
-            Our medical experts are here to help. Book an appointment or contact us for emergency services.
+            Our medical experts are here to help. Contact us for more information about our services or for emergency medical care.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
               className="bg-white text-medical-primary hover:bg-medical-gray-100 font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105"
             >
-              Book Appointment
+              Learn More About Our Services
             </Button>
             <Button 
               size="lg" 

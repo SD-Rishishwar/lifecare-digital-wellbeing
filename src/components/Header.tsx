@@ -73,12 +73,6 @@ const Header = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button className="medical-button-primary text-medical-primary-foreground font-medium px-6 py-2 rounded-lg transition-all duration-300">
-              Book Appointment
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -111,9 +105,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="medical-button-primary text-medical-primary-foreground font-medium px-6 py-2 rounded-lg transition-all duration-300 w-fit">
-                Book Appointment
-              </Button>
             </div>
           </div>
         )}
